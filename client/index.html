@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="/libs/bootstrap/dist/css/bootstrap.min.css">
+    <link rel="stylesheet" href="./main.css">
+    <title>Sistema de Votación</title>
+</head>
+
+<body>
+    <div id="mensajeError" style="color: white;background-color: red;text-align: center; font-weight: bold;"></div>
+    <div class="container py-5">
+        <div class="row">
+            <div class="col-md-4">
+                <div class="card card-body mb-3 bg-dark">
+                    <h1>DApp</h1>
+                    <h6 class="text-muted">Sistema de Votaciones Descentralizado App</h6>
+                    <span>Billetera</span>
+                    <span id="account"></span>
+                </div>
+                <form class="card card-body bg-dark" id="voteForm">
+                    <h4>Votar</h4>
+                    <input type="text" name="nombreVoto" placeholder="Candidato al que quieres votar, pon su ID"
+                        class="from-control bg-dark text-white my-3" autofocus>
+                    <button class="btn btn-primary">Guardar Voto</button>
+                </form>
+                <form class="card card-body bg-dark" id="voteKnwForm">
+                    <h4>Votos Candidato</h4>
+                    <input type="text" name="nombreVotos" placeholder="Id del candidato del que quieres saber los votos"
+                        class="from-control bg-dark text-white my-3" autofocus>
+                    <button class="btn btn-primary">Ver votos</button>
+                    <div id="votosCandidato"></div>
+                </form>
+
+
+            </div>
+            <div class="col-md-8 bg-dark">
+                <div class="card bg-dark">
+                    <h4>Candidatos</h4>
+                </div>
+                <div id="listaCandidatos"></div>
+                <form class="card card-body bg-dark" id="addForm">
+                    <h4>Añadir Candidato</h4>
+                    <input type="text" name="candidato" placeholder="Nombre"
+                        class="from-control bg-dark text-white my-3" autofocus>
+                    <textarea id="edad" rows="2" class="form-control bg-dark text-white my-3"
+                        placeholder="Edad del candidato"></textarea>
+                    <textarea id="identificacion" rows="2" class="form-control bg-dark text-white my-3"
+                        placeholder="Identificación del candidato (9 dígitos)"></textarea>
+                    <button class="btn btn-primary">Añadir Candidato</button>
+                </form>
+                <div class="card card-body bg-dark">
+                    <h4>Ganador/a</h4>
+                    <div id="verGanador"></div>
+                </div>
+            </div>
+
+        </div>
+    </div>
+    <!-- Scripts -->
+    <script src="./libs/@truffle/contract/browser-dist/truffle-contract.min.js"></script>
+    <script src="./app.js"></script>
+    <script src="./ui.js"></script>
+</body>
+
+</html>
