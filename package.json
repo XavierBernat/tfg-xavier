@@ -1,0 +1,20 @@
+{
+  "dependencies": {
+    "@truffle/contract": "^4.6.20",
+    "bootstrap": "^5.2.3",
+    "lite-server": "^2.6.1"
+  },
+  "name": "tfgbc",
+  "version": "1.0.0",
+  "main": "truffle-config.js",
+  "directories": {
+    "test": "test"
+  },
+  "scripts": {
+    "dev": "lite-server"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "description": ""
+}
